@@ -14,8 +14,13 @@ public partial class Calculator : ICalculator
         try
         {
             numbers = _extensions.SplitNumbers(input, delimiters);
+            _extensions.ValidateNumbers(numbers);
         }
         catch (ArgumentException ex)
+        {
+            throw;
+        }
+        catch (Exception)
         {
             throw;
         }

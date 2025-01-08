@@ -42,4 +42,16 @@ public class Extensions
 
         return input;
     }
+
+    public void ValidateNumbers(List<int> numbers)
+    {
+        if (_appSettings.Deny_Negative)
+        {
+            var negatives = numbers.Where(n => n < 0).ToList();
+            if (negatives.Any())
+            {
+                throw new Exception($"Negative numbers are not allowed: {string.Join(", ", negatives)}");
+            }
+        }
+    }
 }
