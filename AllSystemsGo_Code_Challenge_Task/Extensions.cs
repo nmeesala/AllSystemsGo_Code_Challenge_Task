@@ -38,14 +38,24 @@ public class Extensions
             var delimiterSectionEnd = input.IndexOf(@"\n");
             var delimiterSection = input[2..delimiterSectionEnd];
 
-            delimiters.Add(delimiterSection);
+            if (delimiterSection.StartsWith("["))
+            {
+                var matches = Regex.Matches(delimiterSection, "\\[(.*?)\\]");
+                foreach (Match match in matches)
+                {
+                    delimiters.Add(match.Groups[1].Value);
+                }
+            }
+            else
+            {
+                delimiters.Add(delimiterSection);
+            }
 
             input = input[(delimiterSectionEnd)..];
         }
 
         return input;
     }
-
     public void ValidateNumbers(List<int> numbers)
     {
         if (_appSettings.Deny_Negative)
