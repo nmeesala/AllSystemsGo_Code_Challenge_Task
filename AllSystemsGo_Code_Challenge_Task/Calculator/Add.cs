@@ -25,6 +25,11 @@ public partial class Calculator : ICalculator
             throw;
         }
 
+        //Logic to check and invalidate any number greater than config setting and return 0
+        //for the same
+        numbers = numbers.Select(n => n > _appSettings.Number_Greater_Than ? 0 : n).ToList();
+        Console.WriteLine($"{string.Join('+', numbers)} = {numbers.Sum()}");
+
         return numbers.Sum();
     }
 }
