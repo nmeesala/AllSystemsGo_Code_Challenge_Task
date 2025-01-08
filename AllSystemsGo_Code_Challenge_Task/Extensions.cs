@@ -30,4 +30,16 @@ public class Extensions
 
         return numbers;
     }
+
+    public string ExtractCustomDelimiters(string input, List<string> delimiters)
+    {
+        var delimiterSectionEnd = input.IndexOf(@"\n");
+        var delimiterSection = input[1..delimiterSectionEnd];
+
+        delimiters.Add(delimiterSection);
+
+        input = input[(delimiterSectionEnd)..];
+
+        return input;
+    }
 }

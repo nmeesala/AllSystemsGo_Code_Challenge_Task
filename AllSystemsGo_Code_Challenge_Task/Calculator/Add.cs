@@ -9,7 +9,7 @@ public partial class Calculator : ICalculator
         if (string.IsNullOrWhiteSpace(input))
             return 0;
 
-        var delimiters = new List<string> { "," };
+        var delimiters = new List<string> { ",", @"\n" };
 
         try
         {

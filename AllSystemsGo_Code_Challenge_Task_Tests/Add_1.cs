@@ -4,7 +4,7 @@ using Moq;
 
 namespace AllSystemsGo_Code_Challenge_Task_Tests
 {
-    public class AddTest
+    public partial class AddTest
     {
         private Extensions extensions;
         private ICalculator calculator;
@@ -43,14 +43,6 @@ namespace AllSystemsGo_Code_Challenge_Task_Tests
         public void Add_InvalidNumber_TreatsAsZero()
         {
             Assert.Equal(4, calculator.Add("4,tytyt"));
-        }
-
-        [Fact]
-        public void Add_More_Than_2_ThrowsException_False()
-        {
-            var result = calculator.Add("1,2,3,4,5,6,7,8,9,10,11,12");
-
-            Assert.Equal(78, result);
         }
     }
 }
