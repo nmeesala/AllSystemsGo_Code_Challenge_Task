@@ -14,7 +14,7 @@ namespace AllSystemsGo_Code_Challenge_Task_Tests
             Number_Greater_Than = 1000,
             Delimators = null
         };
-         
+
         public AddTest()
         {
             extensions = new Extensions(_appSettings);
@@ -46,13 +46,11 @@ namespace AllSystemsGo_Code_Challenge_Task_Tests
         }
 
         [Fact]
-        public void Add_More_Than_2_ThrowsException()
+        public void Add_More_Than_2_ThrowsException_False()
         {
-            Action act = () => calculator.Add("4, 3,tytyt");
+            var result = calculator.Add("1,2,3,4,5,6,7,8,9,10,11,12");
 
-            ArgumentException exception = Assert.Throws<ArgumentException>(() => act());
-
-            Assert.Equal("Input valid for <=2 numbers", exception.Message);
+            Assert.Equal(78, result);
         }
     }
 }

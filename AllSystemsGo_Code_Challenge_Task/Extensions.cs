@@ -14,8 +14,6 @@ public class Extensions
     {
         var splitNumbers = Regex.Split(input, string.Join("|", delimiters.Select(Regex.Escape)));
 
-        if (splitNumbers.Length > 2) { throw new ArgumentException($"Input valid for <=2 numbers"); }
-        
         var numbers = new List<int>();
 
         foreach (var number in splitNumbers)
