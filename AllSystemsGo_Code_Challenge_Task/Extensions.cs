@@ -33,12 +33,15 @@ public class Extensions
 
     public string ExtractCustomDelimiters(string input, List<string> delimiters)
     {
-        var delimiterSectionEnd = input.IndexOf(@"\n");
-        var delimiterSection = input[1..delimiterSectionEnd];
+        if (input.StartsWith("//"))
+        {
+            var delimiterSectionEnd = input.IndexOf(@"\n");
+            var delimiterSection = input[2..delimiterSectionEnd];
 
-        delimiters.Add(delimiterSection);
+            delimiters.Add(delimiterSection);
 
-        input = input[(delimiterSectionEnd)..];
+            input = input[(delimiterSectionEnd)..];
+        }
 
         return input;
     }
