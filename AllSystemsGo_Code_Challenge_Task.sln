@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllSystemsGo_Code_Challenge_Task", "AllSystemsGo_Code_Challenge_Task\AllSystemsGo_Code_Challenge_Task.csproj", "{A74DB6A9-8E72-4075-AFD8-26A1D42317BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllSystemsGo_Code_Challenge_Task_Tests", "AllSystemsGo_Code_Challenge_Task_Tests\AllSystemsGo_Code_Challenge_Task_Tests.csproj", "{1B6FEF5E-EA34-4101-8EE0-3B497E7A62BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A74DB6A9-8E72-4075-AFD8-26A1D42317BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74DB6A9-8E72-4075-AFD8-26A1D42317BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74DB6A9-8E72-4075-AFD8-26A1D42317BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74DB6A9-8E72-4075-AFD8-26A1D42317BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B6FEF5E-EA34-4101-8EE0-3B497E7A62BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B6FEF5E-EA34-4101-8EE0-3B497E7A62BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B6FEF5E-EA34-4101-8EE0-3B497E7A62BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B6FEF5E-EA34-4101-8EE0-3B497E7A62BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
